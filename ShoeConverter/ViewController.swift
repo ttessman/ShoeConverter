@@ -95,7 +95,7 @@ class ViewController: UIViewController {
         yourAge.resignFirstResponder()
         //yourAge.text = ""
         convertedDogAge.hidden = false
-        convertedDogAge.text = "\(constantYourAge + 7) in dog years"
+        convertedDogAge.text = "\(constantYourAge * 7) in dog years"
     }
 }
 
