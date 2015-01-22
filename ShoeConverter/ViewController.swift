@@ -14,10 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var mensConvertedLabel: UILabel!
     
     @IBOutlet weak var womensText: UITextField!
-    
     @IBOutlet weak var womensConvertedLabel: UILabel!
     
-    
+    @IBOutlet weak var yourAge: UITextField!
+    @IBOutlet weak var convertedDogAge: UILabel!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
         mensSizeTextField.resignFirstResponder()
         let conversionConstant = 30
         let sizeFromTxtField = mensSizeTextField.text.toInt()!
-        mensSizeTextField.text = ""
+        //mensSizeTextField.text = ""
         
         mensConvertedLabel.hidden = false
         mensConvertedLabel.text = "\(sizeFromTxtField + conversionConstant)" + " in European Shoe Size"
@@ -62,11 +63,39 @@ class ViewController: UIViewController {
     @IBAction func convertButtonPressWomen(sender: UIButton) {
         let converionC = 30.5
         let sizeFromTextField = Double((womensText.text as NSString).doubleValue)
-        womensText.text = ""
+        //womensText.text = ""
         womensConvertedLabel.hidden = false
         womensConvertedLabel.text = "\(sizeFromTextField + converionC) in European Shoe Size"
         womensText.resignFirstResponder()
         
+    }
+    @IBAction func clearLabel(sender: AnyObject) {
+        convertedDogAge.hidden = true
+        convertedDogAge.text = ""
+        
+    }
+    @IBAction func clearMensLabel(sender: AnyObject) {
+        mensConvertedLabel.hidden = true
+        mensConvertedLabel.text = ""
+    }
+    
+    @IBAction func clearWomensLabel(sender: AnyObject) {
+        womensConvertedLabel.hidden = true
+        womensConvertedLabel.text = ""
+    }
+    
+    @IBAction func clearTextField(sender: UITextField) {
+        sender.text = ""
+    }
+    
+    @IBAction func convertToDogYears(sender: UIButton) {
+        
+        let converionRate = 7
+        let constantYourAge = yourAge.text.toInt()!
+        yourAge.resignFirstResponder()
+        //yourAge.text = ""
+        convertedDogAge.hidden = false
+        convertedDogAge.text = "\(constantYourAge + 7) in dog years"
     }
 }
 
