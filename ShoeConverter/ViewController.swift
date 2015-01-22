@@ -90,12 +90,40 @@ class ViewController: UIViewController {
     
     @IBAction func convertToDogYears(sender: UIButton) {
         
-        let converionRate = 7
+        /*let youngConverionRate = 10.5
+        let oldConversionRate = 4
         let constantYourAge = yourAge.text.toInt()!
+        let ageBreak = 2
         yourAge.resignFirstResponder()
-        //yourAge.text = ""
+        
+        if constantYourAge <= ageBreak{
+            convertedDogAge.text = "\(Double(constantYourAge) * youngConverionRate) in dog years"
+        } else {
+            var adultLifeYears = constantYourAge - 2
+            //println(adultLifeYears)
+            adultLifeYears = adultLifeYears * oldConversionRate
+            //println(adultLifeYears)
+            let childhood = Double(ageBreak) * youngConverionRate
+            //println(childhood)
+            convertedDogAge.text = "\(childhood + Double(adultLifeYears)) in dog years"
+        }
+        */
+        
+        yourAge.resignFirstResponder()
+        let doubleYourAge = Double((yourAge.text as NSString).doubleValue)
+        var realDogYears:Double
+        
+        if doubleYourAge > 2{
+            realDogYears = (10.5 * 2) + (doubleYourAge - 2) * 4
+        }
+        else
+        {
+            realDogYears = doubleYourAge * 10.5
+        }
+        convertedDogAge.text = "\(realDogYears) in dog years"
         convertedDogAge.hidden = false
-        convertedDogAge.text = "\(constantYourAge * 7) in dog years"
+       
+        
     }
 }
 

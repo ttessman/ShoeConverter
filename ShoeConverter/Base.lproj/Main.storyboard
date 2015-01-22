@@ -142,18 +142,6 @@
                                     <rect key="frame" x="16" y="91" width="146" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jP6-nx-wcu">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="91" width="146" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="clearLabel:" destination="4xQ-BE-wOB" eventType="editingChanged" id="eHW-1x-mgE"/>
-                                    <action selector="clearTextField:" destination="4xQ-BE-wOB" eventType="editingDidBegin" id="6nf-vT-Cle"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K94-Gl-sDA">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Convert">
@@ -166,6 +154,18 @@
                                     <action selector="convertToDogYears:" destination="4xQ-BE-wOB" eventType="touchUpInside" id="QkB-u9-FK2"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jP6-nx-wcu">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="90" width="146" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clearLabel:" destination="4xQ-BE-wOB" eventType="editingChanged" id="eHW-1x-mgE"/>
+                                    <action selector="clearTextField:" destination="4xQ-BE-wOB" eventType="editingDidBegin" id="6nf-vT-Cle"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -174,8 +174,8 @@
                                 <exclude reference="aoy-az-BD7"/>
                                 <exclude reference="Wrq-kq-bs1"/>
                                 <exclude reference="t3F-4F-7Kv"/>
-                                <exclude reference="jP6-nx-wcu"/>
                                 <exclude reference="K94-Gl-sDA"/>
+                                <exclude reference="jP6-nx-wcu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -184,8 +184,8 @@
                                 <include reference="aoy-az-BD7"/>
                                 <include reference="Wrq-kq-bs1"/>
                                 <include reference="t3F-4F-7Kv"/>
-                                <include reference="jP6-nx-wcu"/>
                                 <include reference="K94-Gl-sDA"/>
+                                <include reference="jP6-nx-wcu"/>
                             </mask>
                         </variation>
                     </view>
